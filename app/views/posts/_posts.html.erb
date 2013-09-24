@@ -1,11 +1,16 @@
 <%= link_to "New Post", new_post_path, class: "btn btn-success", :style => "margin: 5px 500px 5px 500px" %>
 
-<dic class="flash_notice"><div class="alert alert-success"> <%= notice %> </div></div>
+<div class="flash_notice"><div class="alert alert-success"> <%= notice %> </div></div>
+ 
+
+
+
+
 <ul class="nav nav-pills nav-stacked">
 <li class="active">
     <a href="#">
-      <span class="badge pull-right"><%= Post.count %></span>
-      Number of Posts 
+      <span class="badge "><%= Post.count %></span>
+       Posts 
     </a>
   </li>
 </ul>

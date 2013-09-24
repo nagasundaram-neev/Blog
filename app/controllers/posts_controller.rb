@@ -7,7 +7,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
   def new
-    #@post = Post.new
+    @post = Post.new
     render 'index'
   end
    
