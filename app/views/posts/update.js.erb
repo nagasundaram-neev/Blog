@@ -1,0 +1,13 @@
+<% if @post.errors.any? -%>
+  $("#flash_notice").hide(10);
+  $("#post_errors").html("<%= escape_javascript(error_messages_for(@post))%>");
+  $("#post_errors").show(10);
+<% else -%>
+  $("#post_errors").hide(10);
+  $("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
+  $("#flash_notice").show(10);
+  $(":input:not(input[type=submit])").val("");
+ 
+  $("#posts_list").html("<%= escape_javascript( render(:partial => "posts") ) %>");
+  $("#postwindow").hide(100)
+<% end -%>
