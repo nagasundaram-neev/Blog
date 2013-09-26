@@ -1,6 +1,7 @@
 <div id="postwindow">
   <div class="popover" style="margin:200px 500px 500px 500px;display:block;">
-    <h3 class="popover-title"><b>Post</b><a href="#" class="btn btn-danger btn-mini active pull-right" onclick="document.getElementById("#postwindow").style.visibility='hidden'" ><i class="icon-white icon-remove"></i></a></h3>
+    <h3 class="popover-title"><b>Post</b><button type="button" class="close" data-dismiss="popover" aria-hidden="true">&times;</button></h3>
+    
     <div class="popover-content">
       <%= form_for(@post, :remote => true) do |f| %>
       <div id= "post_errors" >
@@ -18,6 +19,7 @@
       <%= f.text_field :title, placeholder:"Title" %>
       <%= f.text_area :content, :rows => 5, placeholder:"Content" %>
       <%= f.submit class: "btn btn-xs btn-success" %>
+       <button type="button" class="btn btn-default" data-dismiss="popover">Close</button>
       <% end %>
    
    </div>

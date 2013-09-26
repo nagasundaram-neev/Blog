@@ -1,19 +1,21 @@
 class PostsController < ApplicationController
 
-  before_filter :load
+  before_filter :load, :only => [:new,:index]
 
   def load
     @posts = Post.all
     @post = Post.new
   end
   def new
-    @post = Post.new
-    render 'index'
+
+   #@post = Post.new
+    
   end
    
 
   def index
-
+  #@posts = Post.all
+  #  @post = Post.new
   end
 
   def create
@@ -33,6 +35,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       flash[:notice] = "Successfully updated post."
       @posts = Post.all
+
     end
   end
   
