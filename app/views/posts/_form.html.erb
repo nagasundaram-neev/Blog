@@ -1,6 +1,10 @@
+
+
+
+
 <div id="postwindow">
   <div class="popover" style="margin:200px 500px 500px 500px;display:block;">
-    <h3 class="popover-title"><b>Post</b><button type="button" class="close" data-dismiss="popover" aria-hidden="true">&times;</button></h3>
+    <h3 class="popover-title"><b>Post</b><button type="button" class="close" onclick="cancel()" aria-hidden="true">&times;</button></h3>
     
     <div class="popover-content">
       <%= form_for(@post, :remote => true) do |f| %>
@@ -19,7 +23,7 @@
       <%= f.text_field :title, placeholder:"Title" %>
       <%= f.text_area :content, :rows => 5, placeholder:"Content" %>
       <%= f.submit class: "btn btn-xs btn-success" %>
-       <button type="button" class="btn btn-default" data-dismiss="popover">Close</button>
+       <button type="button" class="btn btn-default" onclick="cancel()">Close</button>
       <% end %>
    
    </div>

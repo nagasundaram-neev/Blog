@@ -26,3 +26,7 @@
 //= require bootstrap-dropdown
 //= require bootstrap-popover
 
+function cancel()
+{
+document.getElementById("postwindow").style.display='none';
+}
