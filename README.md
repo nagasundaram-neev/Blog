@@ -1,2 +1,4 @@
 Blog 
 =========
+:rabbit:
+/play secret
